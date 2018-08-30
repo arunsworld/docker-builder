@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
 
 RUN apt-get update --fix-missing && apt-get install -y wget vim git \
-        build-essential && \
+        build-essential libssl-dev && \
         apt-get clean
 
 RUN wget --quiet https://cmake.org/files/v3.12/cmake-3.12.1-Linux-x86_64.tar.gz -O ~/cmake.tar.gz && \
